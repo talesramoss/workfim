@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+    <meta charset="utf8">
+    <meta http-equiv="X-AU-Compatible" content="IE=edge">
+    <meta name="vieport" content="width-device-width, initial-scale=1.0">
+    <title>GreenTech</title>
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
+    <link rel="stylesheet" href="../css/direct.css">
+    <link rel="stylesheet" href="../css/inicio-pag/produtos.css">
+<body>
+
+    <header class="header">
+        <a href="#" class="logo">GreenTech</a>
+        
+        <input type="checkbox" id="check">
+        <label for="check" class="icons">
+            <i class='bx bx-menu' id="menu-icon"></i>
+            <i class='bx bx-x' id="close-icon"></i>
+        </label>
+
+        <nav class="navbar">
+            <a href="../index.html" style="--i:0;">Inicio</a>
+            <a href="produtos.html" style="--i:3;">Produto</a>
+            <a href="contato.html" style="--i:4;">Contato</a>
+        </nav>
+    </header>
+
+    <section class="home">
+        <div class="home-img">
+            <img src="../img/apples-red.png" alt="" class="one">
+        </div>
+        <div class="home-text">
+            <h1>Frutas<br>Maduras</h1>
+            <h5> VEGANAS</h5>
+            <h3>$30.00</h3>
+            <a href="#" class="sell">Comprar</a>
+        </div>
+    </section>
+    
+    <div class="main">
+        <div class="row">
+            <li><img src="../img/maça.png" onclick="slider('.one', '../img/apples-red.png')"></li>
+        </div>
+
+        <div class="row2">
+            <li><img src="../img/peras.png" onclick="slider('.one', '../img/two-pears.png')"></li>
+        </div>
+
+        <div class="row3">
+            <li><img src="../img/laranja.png" onclick="slider('.one', '../img/cut-orange.png')"></li>
+        </div>
+    </div>
+
+    <script>
+        function slider(targetClass, anything) {
+            document.querySelector(targetClass).src = anything;
+        }
+
+        let menu = document.querySelector('#menu-icon');
+        let navbar = document.querySelector('.navbar');
+
+        menu.onclick = () => {
+            menu.classList.toggle('bx-x');
+            navbar.classList.toggle('open');
+        };
+    </script>
+
+    <div class="itens">
+        <div class="produto">
+            <img src="../img/feijão.jpg" alt="" class="picture">
+            <h3>Green Beans</h3>
+            <p>feijão verde 100% <br> natural</p>
+            <p class="preco">$3,60</p>
+            <button type="submit" class="btn">comprar</button>
+        </div>
+        <div class="produto2">
+            <img src="../img/Saco de Cereais.png" alt="" class="picture">
+            <h3>Saco de Cereais</h3>
+            <p>Cereais Pardo <br> natural</p>
+            <p class="preco">$29,40</p>
+            <button type="submit" class="btn">comprar</button>
+        </div>
+        <div class="produto3">
+            <img src="../img/aveia.png" alt="" class="picture">
+            <h3>Aveia</h3>
+            <p>Flocos Grossos - 1kg <br> natural</p>
+            <p class="preco">$12,60</p>
+            <button type="submit" class="btn">comprar</button>
+        </div>
+        <div class="produto4">
+            <img src="../img/sementes.png" alt="" class="picture">
+            <h3>Sementes de Gergelim</h3>
+            <p>natural com casca 250g<br> natural</p>
+            <p class="preco">$8.50</p>
+            <button type="submit" class="btn">comprar</button>
+        </div>
+    </div>
+
+
+
+    <div class="footer-social-icons">
+        <ul class="social-icons">
+            <li><a href="" class="social-icon"> <i class="fa fa-facebook"></i></a></li>
+            <li><a href="" class="social-icon"> <i class="fa fa-twitter"></i></a></li>
+            <li><a href="" class="social-icon"> <i class="fa fa-rss"></i></a></li>
+            <li><a href="" class="social-icon"> <i class="fa fa-youtube"></i></a></li>
+            <li><a href="" class="social-icon"> <i class="fa fa-linkedin"></i></a></li>
+            <li><a href="" class="social-icon"> <i class="fa fa-github"></i></a></li>
+        </ul>
+    </div>
+</body>
